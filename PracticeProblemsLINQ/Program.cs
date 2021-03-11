@@ -40,7 +40,7 @@ namespace PracticeProblemsLINQ
                 "98,100,66,74,55"
             };
             LinqProblems.RunProblem5(classGrades);
-
+            LinqProblems.RunProblem6(classGrades);
             ////--------------------
             ////Bonus Problem 1
             //string letters = "terrill";
