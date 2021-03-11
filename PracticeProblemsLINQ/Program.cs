@@ -15,18 +15,19 @@ namespace PracticeProblemsLINQ
             LinqProblems.RunProblem1(words);
 
             ////Problem 2
-            //List<string> names = new List<string>() { "Mike", "Brad", "Nevin", "Ian", "Mike" };
-
+            List<string> names = new List<string>() { "Mike", "Brad", "Nevin", "Ian", "Mike" };
+            LinqProblems.RunProblem2(names);
 
             ////Problem 3 & Problem 4
-            //List<Customer> customers = new List<Customer>()
-            //{
-            //    new Customer(1, "Mike", "Rodgers"),
-            //    new Customer(2, "Nick", "Allen"),
-            //    new Customer(3, "Jason", "Ryan"),
-            //    new Customer(4, "Dan", "Laffey")
-            //};
+            List<Customer> customers = new List<Customer>()
+            {
+                new Customer(1, "Mike", "Rodgers"),
+                new Customer(2, "Nick", "Allen"),
+                new Customer(3, "Jason", "Ryan"),
+                new Customer(4, "Dan", "Laffey")
+            };
 
+            LinqProblems.RunProblem3(customers);
 
             ////Problem 5
             //List<string> classGrades = new List<string>()

@@ -32,29 +32,45 @@ namespace PracticeProblemsLINQ
         }
         #endregion
 
-        //#region Problem 2 
+        #region Problem 2 
         ////(5 points) Problem 2
         ////Using LINQ, write a method that takes in a list of strings and returns a copy of the list without duplicates.
-        //public static List<string> RunProblem2(List<string> names)
-        //{
-        //    //code
+        public static List<string> RunProblem2(List<string> names)
+        {
+            //code
+            var result = names.Distinct();
 
-        //    //return
+            List<string> newList = new List<string>();
+            foreach(var name in result)
+            {
+                Console.WriteLine("Problem #2: " + name);
+                Console.ReadLine();
+                newList.Add(name);
+            }
 
-        //}
-        //#endregion
+            return newList;
 
-        //#region Problem 3
+        }
+        #endregion
+
+        #region Problem 3
         ////(5 points) Problem 3
         ////Using LINQ, write a method that takes in a list of customers and returns the lone customer who has the name of Mike. 
-        //public static Customer RunProblem3(List<Customer> customers)
-        //{
-        //    //code
+        public static Customer RunProblem3(List<Customer> customers)
+        {
+            //code
+            var result = customers.Where(cust => cust.FirstName == "Mike");
 
-        //    //return
+            foreach(var name in result)
+            {
+                Console.WriteLine("Problem #3:" + name.FirstName);
+                Console.ReadLine();
 
-        //}
-        //#endregion
+            }
+            //return
+            return (Customer)result;
+        }
+        #endregion
 
         //#region Problem 4
         ////(5 points) Problem 4
