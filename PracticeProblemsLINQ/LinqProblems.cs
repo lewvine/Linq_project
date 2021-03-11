@@ -18,15 +18,14 @@ namespace PracticeProblemsLINQ
         public static List<string> RunProblem1(List<string> words)
         {
             //code
-            var result = words.Where(w => w.Contains("th"));
-            List<string> newList = new List<string>();
+            List<string> result = words.FindAll(w => w.Contains("th"));
+
             foreach (var word in result)
             {
                 Console.WriteLine(word);
                 Console.ReadLine();
-                newList.Add(word);
             }
-            return newList;
+            return result;
             //return
 
         }
@@ -38,17 +37,15 @@ namespace PracticeProblemsLINQ
         public static List<string> RunProblem2(List<string> names)
         {
             //code
-            var result = names.Distinct();
+            var result = names.Distinct().ToList();
 
-            List<string> newList = new List<string>();
             foreach(var name in result)
             {
                 Console.WriteLine("Problem #2: " + name);
                 Console.ReadLine();
-                newList.Add(name);
             }
 
-            return newList;
+            return result;
 
         }
         #endregion
@@ -59,25 +56,22 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem3(List<Customer> customers)
         {
             //code
-            var result = customers.Where(cust => cust.FirstName == "Mike");
+            Customer result = customers.Find(cust => cust.FirstName == "Mike");
 
-            foreach(var name in result)
-            {
-                Console.WriteLine("Problem #3:" + name.FirstName);
-                Console.ReadLine();
-
-            }
             //return
-            return (Customer)result;
+            return result;
         }
         #endregion
 
         //#region Problem 4
-        ////(5 points) Problem 4
-        ////Using LINQ, write a method that takes in a list of customers and returns the customer who has an id of 3. 
-        ////Then, update that customer's first name and last name to completely different names and return the newly updated customer from the method.
+        //////(5 points) Problem 4
+        //////Using LINQ, write a method that takes in a list of customers and returns the customer who has an id of 3. 
+        //////Then, update that customer's first name and last name to completely different names and return the newly updated customer from the method.
         //public static Customer RunProblem4(List<Customer> customers)
         //{
+        //    var result = customers.Where(cust => cust.Id == 3);
+
+        //    result.FirstName = ""
         //    //code
 
         //    //return
