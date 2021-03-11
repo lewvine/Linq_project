@@ -28,16 +28,18 @@ namespace PracticeProblemsLINQ
             };
 
             LinqProblems.RunProblem3(customers);
+            LinqProblems.RunProblem4(customers);
+
 
             ////Problem 5
-            //List<string> classGrades = new List<string>()
-            //{
-            //    "80,100,92,89,65", 
-            //    "93,81,78,84,69",
-            //    "73,88,83,99,64",
-            //    "98,100,66,74,55"
-            //};
-
+            List<string> classGrades = new List<string>()
+            {
+                "80,100,92,89,65",
+                "93,81,78,84,69",
+                "73,88,83,99,64",
+                "98,100,66,74,55"
+            };
+            LinqProblems.RunProblem5(classGrades);
 
             ////--------------------
             ////Bonus Problem 1
